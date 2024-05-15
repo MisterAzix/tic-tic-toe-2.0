@@ -1,0 +1,29 @@
+{
+  "name": "api-usecases",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/api-usecases/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/api-usecases",
+        "main": "libs/api-usecases/src/index.ts",
+        "tsConfig": "libs/api-usecases/tsconfig.lib.json",
+        "assets": ["libs/api-usecases/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "reportsDirectory": "../../coverage/libs/api-usecases"
+      }
+    }
+  }
+}

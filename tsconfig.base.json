@@ -1,0 +1,32 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2022",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "module": "esnext",
+    "noEmit": true,
+    "lib": ["es2022", "dom", "dom.iterable"],
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "api-domain": ["libs/api-domain/src/index.ts"],
+      "api-infrastructure": ["libs/api-infrastructure/src/index.ts"],
+      "api-usecases": ["libs/api-usecases/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

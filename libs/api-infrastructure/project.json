@@ -1,0 +1,29 @@
+{
+  "name": "api-infrastructure",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/api-infrastructure/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/api-infrastructure",
+        "main": "libs/api-infrastructure/src/index.ts",
+        "tsConfig": "libs/api-infrastructure/tsconfig.lib.json",
+        "assets": ["libs/api-infrastructure/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "reportsDirectory": "../../coverage/libs/api-infrastructure"
+      }
+    }
+  }
+}

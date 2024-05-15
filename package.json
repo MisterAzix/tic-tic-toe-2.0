@@ -6,10 +6,13 @@
     "node": "20.13.1"
   },
   "scripts": {
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky"
   },
   "private": true,
   "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
     "@nx/eslint": "19.0.3",
     "@nx/eslint-plugin": "19.0.3",
     "@nx/js": "19.0.3",
@@ -27,11 +30,11 @@
     "@vitest/ui": "^1.3.1",
     "eslint": "~8.57.0",
     "eslint-config-prettier": "^9.0.0",
+    "husky": "^9.0.11",
     "nx": "19.0.3",
     "prettier": "^2.8.8",
     "typescript": "~5.4.2",
     "vite": "~5.0.0",
     "vitest": "^1.3.1"
-  },
-  "dependencies": {}
+  }
 }
